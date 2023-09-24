@@ -1,0 +1,125 @@
+:root{
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Lightgrayishblue);
+}
+
+.testimonials, main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    min-height: 90vh;
+}
+
+.card{
+    margin: 10px;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.dp{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.identity{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.name{
+    color: var(--Lightgrayishblue);
+}
+
+.status{
+    color: var(--Lightgrayishblue);
+    opacity: 50%;
+}
+
+.subject{
+    color: var(--Lightgrayishblue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.comment{
+    color: var(--Lightgrayishblue);
+    opacity: 70%;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.card2{
+    background-color: var(--Moderateviolet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+}
+
+.card3{
+    background-color: var(--Verydarkgrayishblue);
+}
+
+.card4, .card6{
+    background-color: var(--White);
+}
+
+.card5{
+    background-color: var(--Verydarkblackishblue);
+}
+
+.card4 .name, .card4 .status, .card4 .subject, .card4 .comment{
+    color: var(--Verydarkgrayishblue);
+}
+
+.card6 .name, .card6 .status, .card6 .subject, .card6 .comment{
+    color: var(--Verydarkgrayishblue);
+}
+
+@media (min-width: 1200px) {
+    .testimonials{
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: 300px 300px;
+        align-items: stretch;
+        gap: 25px;
+    }
+    .card{
+        margin: 0;
+        max-width: none;
+    }
+    .card2{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .card3{
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    .card4{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .card5{
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    .card6{
+        grid-area: 1 / 4 / 3 / 5;
+    }
+}
